@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration Quotes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="picture">
+        <img src="./changa2.png" alt="Background image">
+        <div class="left">
+            <h1>DAILY <br/> MOTIVATIONAL <br/> QUOTES</h1>
+            <div id="quote" class="quote">Click the button to get inspired</div>
+            <button id="quoteBtn" class="quote-btn">New Quote</button>
+        </div>
+    </div>
+    <script>
+        const quotes = [
+          "Believe in yourself and all that you are.",
+          "The only way to do great work is to love what you do.",
+          "Your time is limited, so don’t waste it living someone else’s life.",
+          "Push yourself, because no one else is going to do it for you.",
+          "Success is what happens after you’ve survived all your mistakes.",
+          "Stay focused, go after your dreams and keep moving toward your goals.",
+          "Don’t watch the clock; do what it does. Keep going.",
+          "You are capable of amazing things."
+        ];
+    
+        const quoteBtn = document.getElementById("quoteBtn");
+        const quoteText = document.getElementById("quote");
+
+        function getNewQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteText.textContent = quotes[randomIndex];
+        }
+
+        quoteBtn.addEventListener("click", getNewQuote);
+    </script>
+</body>
+</html>
